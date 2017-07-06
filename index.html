@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Document</title>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="myModal" class="modal">
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+    <img class="modal-content" id="img01">
+  </div>
+  <div class="header"></div>
+  <div class="mainDiv">
+    <div class="chatDiv">
+      <ul>
+      </ul>
+    </div>
+    <div class="sendMsg">
+      <textarea rows="4" cols="50" id="textmsg"></textarea>
+      <button id="send">comment</button>
+      <input type="button" value="Upload" onclick="showPicker()" />
+    </div>
+  </div>
+  <div class="footer"></div>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBIFhWNDNvSYcBKC_m94MiSuJtY9sSpniA",
+    authDomain: "test-dad75.firebaseapp.com",
+    databaseURL: "https://test-dad75.firebaseio.com",
+    projectId: "test-dad75",
+    storageBucket: "",
+    messagingSenderId: "104043201651"
+  };
+  firebase.initializeApp(config);
+  var ref = firebase.database().ref('confession/');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
+  <script src="js/javasript.js"></script>
+  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+  <script>
+  var client = filestack.init('AWDGWJo4BQZqXQ0oglBEfz');
+
+  function showPicker() {
+    client.pick({}).then(function(result) {
+      console.log(result.filesUploaded[0]);
+      console.log(JSON.stringify(result.filesUploaded));
+      ref.push(
+        result.filesUploaded[0]
+      );
+    });
+  }
+  </script>
+</body>
+
+</html>
