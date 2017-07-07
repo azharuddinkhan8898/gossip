@@ -58,6 +58,26 @@ $(function () {
   getIPs(function (ip) {
     localip = ip;
   });
+
+  $("#textmsg").on('keypress', function () {
+    ref.on("child_changed", function (data) {
+      if (data.val() == true){
+        $(".typing").removeClass("hide");
+      }
+      else{
+        $(".typing").addClass("hide");
+      }
+    });
+    ref.update({
+      "typing": true
+    });
+    var timeouttype = setTimeout(function () {
+      ref.update({
+        "typing": false
+      });
+    }, 1000);
+    clearTimeout(timeouttype);
+  });
   $("#send").click(function () {
     var msgbox = $("#textmsg").val();
     ref.push({
