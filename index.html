@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -21,16 +21,57 @@
     <button>submit your story</button>
   </div>
   <div class="story">
-    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          
+        </div>
+        <div class="item">
+          
+        </div>
+        <div class="item">
+          
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="captions">
+      <div class="caption1">
+        <h4><b>#HAPPYBIRTHDAY1</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+      <div class="caption2">
+        <h4><b>#HAPPYBIRTHDAY2</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+      <div class="caption3">
+        <h4><b>#HAPPYBIRTHDAY3</b></h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+    </div>
   </div>
   <div class="mainDiv">
     <div class="chatDiv">
       <ul>
       </ul>
-
     </div>
     <div class="sendMsg">
-    <p class="typing hide">someone is typing...</p>
+      <p class="typing hide">someone is typing...</p>
       <textarea rows="4" cols="50" id="textmsg"></textarea>
       <button id="send">comment</button>
       <input type="button" value="Upload" onclick="showPicker()" />
@@ -53,11 +94,10 @@
   firebase.initializeApp(config);
   var ref = firebase.database().ref('confession/');
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="http://cdn.peerjs.com/0.3/peer.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/javasript.js"></script>
-  <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+  <script type="text/javascript" src="js/file.js"></script>
   <script>
   var client = filestack.init('AWDGWJo4BQZqXQ0oglBEfz');
 
