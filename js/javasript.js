@@ -115,9 +115,19 @@ $(function () {
     var currentSlide = $('div.active').index() + 1;
     $(".captions .caption" + currentSlide).fadeIn(100);
   });
-  $(".captions h4").click(function(){
+  $(".captions h4").click(function () {
     var storeHTML = $(this).html();
-    $("#textmsg").val(storeHTML+" ");
+    $("#textmsg").val(storeHTML + " ");
     $("#textmsg").focus();
+  });
+  $(".submitPic, .submitTextBox textarea").fadeOut(0)
+  $(".header .button").click(function () {
+    $(".header .button .openpop").empty();
+    $(this).animate({ "top": "0px", "height": "60px", "border-radius": "0px" }, 100, function () {
+      $(".submitPic, .submitTextBox textarea").fadeIn(200);
+      $(".submitPic").animate({ "left": "20px" }, 200);
+      $(".submitTextBox textarea").animate({ "left": "90px" }, 200);
+      $(this).animate({ "width": "60%" }, 200);
+    });
   });
 });

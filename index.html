@@ -5,6 +5,7 @@
 
 <head>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,7 +19,11 @@
       <img src="oie_transparent-2.png" alt="">
     </div>
     <p class="logoText">Gossip</p>
-    <button>submit your story</button>
+    <div class="button"><span class="openpop">submit your story</span>
+      <div class="submitPic"><i class="fa fa-picture-o fa-3x" aria-hidden="true"></i></div>
+      <div class="submitTextBox"><textarea name="" id="" cols="40" rows="2"></textarea></div>
+      <div class="submitStory"><span class="submit">Submit</span><span class="close0">Close</span></div>
+    </div>
   </div>
   <div class="story">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -74,7 +79,7 @@
       <p class="typing hide">someone is typing...</p>
       <textarea rows="4" cols="50" id="textmsg"></textarea>
       <button id="send">comment</button>
-      <input type="button" value="Upload" onclick="showPicker()" />
+      <input class="uploadButton" type="button" value="Upload" onclick="showPicker()" />
     </div>
   </div>
   <div class="footer">
