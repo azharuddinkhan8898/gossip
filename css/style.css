@@ -101,9 +101,9 @@ body {
 
 .mainDiv {
   position: absolute;
-  top: 60px;
+  top: 10%;
   right: 0;
-  height: 86%;
+  height: 85%;
   width: 40%;
   background: #fff;
   -webkit-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.19);
@@ -131,7 +131,7 @@ body {
 .chatDiv {
   position: absolute;
   width: 100%;
-  height: 450px;
+  height: 81%;
   padding: 10px 7px 30px 7px;
   overflow: auto;
 }
@@ -162,7 +162,7 @@ body {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  height: 30px;
+  height: 5%;
   background: #002033;
 }
 
@@ -171,7 +171,7 @@ body {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 60px;
+  height: 10%;
   background: #00385a;
   /* background: #34495E; */
 }
@@ -202,6 +202,7 @@ body {
   margin-left: 140px;
   color: #fff;
   font-size: 40px;
+  line-height: 158%;
 }
 
 .header .button {
@@ -228,7 +229,7 @@ body {
   position: absolute;
   width: 59%;
   height: 545px;
-  top: 60px;
+  top: 10%;
   background: #fff;
 }
 
@@ -288,4 +289,11 @@ p.typing {
   left: 150px;
   color: #000000;
   font-weight: normal;
+}
+
+.header .logo {
+  background: #fff url(../oie_transparent-2.png);
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }

@@ -120,10 +120,10 @@ $(function () {
     $("#textmsg").val(storeHTML + " ");
     $("#textmsg").focus();
   });
-  $(".submitPic, .submitTextBox textarea").fadeOut(0)
+  $(".submitPic, .submitTextBox textarea, .submitStory").fadeOut(0)
   $(".header .button").click(function () {
     $(".header .button .openpop").empty();
-    $(this).animate({ "top": "0px", "height": "60px", "border-radius": "0px" }, 100, function () {
+    $(this).animate({ "top": "0px", "height": "100%", "border-radius": "0px" }, 100, function () {
       $(".submitPic, .submitTextBox textarea").fadeIn(200);
       $(".submitPic").animate({ "left": "20px" }, 200);
       $(".submitTextBox textarea").animate({ "left": "90px" }, 200);
